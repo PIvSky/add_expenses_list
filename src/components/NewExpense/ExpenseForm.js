@@ -26,10 +26,12 @@ const ExpenseForm = (props) => {
             title: enteredTitle,
             amount: enteredAmount,
             date: new Date(enteredDate),
+            // an object with key and values;
         };
-
         
     props.onSaveExpenseData(expenseData);
+    // we execute(!) here a function from a ExpenseForm props -> see it in return in NewExpense.js; we can excute this function from another component,
+    // becouse we have a pointer in prop to this function in component NewExpens.js;
     
     setEnteredTitle('');
     setEnteredAmount('');

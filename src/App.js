@@ -31,7 +31,8 @@ function App() {
   const addExpenseHandler = expense => {
     console.log('In App.js');
     console.log(expense);
-  }
+  };
+  // this function is passed below as a value in onAddExpense prop;
 
   return (
     <div>
