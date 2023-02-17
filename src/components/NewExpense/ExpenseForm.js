@@ -10,7 +10,7 @@ const ExpenseForm = (props) => {
     const titleChangeHandler = (event) => {
         setEnteredTitle(event.target.value);
     }
-
+    
     const amountChangeHandler = (event) => {
         setEnteredAmount(event.target.value);
     }
@@ -36,7 +36,7 @@ const ExpenseForm = (props) => {
     setEnteredTitle('');
     setEnteredAmount('');
     setEnteredDate('');
-    // it clears our form after submission
+    // executing functions; ('') it clears our form after submission
     };
 
     return (
