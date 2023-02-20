@@ -7,7 +7,7 @@ const InitialExpenses = [
     id: "e1",
     title: "Toilet Paper",
     amount: 94.12,
-    date: new Date(2020, 7, 14),
+    date: new Date(2019, 7, 14),
   },
   { id: "e2", 
     title: "New TV", 
