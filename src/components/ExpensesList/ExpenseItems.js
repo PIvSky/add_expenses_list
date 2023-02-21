@@ -7,7 +7,8 @@ import './ExpenseItems.css';
 const container = document.querySelector('.expense-item');
 
 const onTrash = () => {
-  container.target.remove();
+  container.remove(container.children);
+  // console.log(e)
 };
 
 function ExpenseItem(props) {
@@ -17,10 +18,10 @@ function ExpenseItem(props) {
       <ExpenseDate date={props.date} />
       <div className='expense-item__description'  >
         <h2>{props.title}</h2>
-        <div className='expense-item__price'>{props.amount + '$'}</div>
+        <div className='expense-item__price' >{props.amount + '$' }</div>
       </div>
-      <button className='expense-item__trash' onClick={onTrash} >
-        <img className='trash' src='/src/icons/trashIcon.png' alt='trashIcon'></img>
+      <button type="button" className='expense-item__trash' onClick={onTrash} >
+        {/* <img className='trash' src='/src/icons/trashIcon.png' alt='trashIcon'></img> */}
       </button>
     </Card>
     );
