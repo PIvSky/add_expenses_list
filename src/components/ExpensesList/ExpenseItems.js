@@ -4,18 +4,12 @@ import ExpenseDate from './ExpenseDate';
 import Card from './Card';
 import './ExpenseItems.css';
 
-
-const onTrash = () => {
-  // const container = document.querySelector('.container');
-  const container = document.querySelector('.expense-item');
-  container.remove(container.childElement);
-  // container.removeChild(container)
-  // container?.removeChild(container)
-  // console.log(container.nodeValue)
-};
-
 function ExpenseItem(props) {
 
+  const onTrash = () => {
+    
+  };
+  
   return (
     <div>
       <Card className='expense-item'  >
@@ -25,7 +19,6 @@ function ExpenseItem(props) {
           <div className='expense-item__price' >{props.amount + '$' }</div>
         </div>
         <button type="button" className='expense-item__trash' onClick={onTrash} >
-          {/* <img className='trash' src='/src/icons/trashIcon.png' alt='trashIcon'></img> */}
         </button>
       </Card>
     </div>

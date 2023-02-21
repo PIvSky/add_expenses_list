@@ -31,9 +31,9 @@ function App() {
   
   const [expenses, setExpenses] = useState(InitialExpenses)
 
-  const addExpenseHandler = expense => {
+  const addExpenseHandler = exp => {
     setExpenses((prevExpenses) => {
-      return [expense, ...prevExpenses]
+      return [exp, ...prevExpenses]
     });
   };
 
@@ -41,6 +41,8 @@ function App() {
     <div>
       <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
+      <button style={{ display: "flex", margin: "auto"}} onClick={onDelete}>Delete Item From Array</button>
+      {/* prototype of deleting */}
     </div>
   );
 }

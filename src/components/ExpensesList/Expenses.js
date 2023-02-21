@@ -17,7 +17,7 @@ function Expenses(props) {
         return expenses.date.getFullYear().toString() === filteredYear
     });
 
-    let expensesContent = undefined
+    let expensesContent;
 
     if (filteredList.length === 0) {
         expensesContent = <p>No expenses found. </p>
@@ -30,6 +30,13 @@ function Expenses(props) {
                 date={expense.date}
             />
             ))};
+
+    // function onDelete(podaj identyfikator) {
+    //     value.preventDefault();
+    //     setExpenses(oldValue => {
+    //         return oldValue.filter(exp => exp !== value)})
+    //     }
+            
 
     return (
         <div>

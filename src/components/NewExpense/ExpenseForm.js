@@ -33,9 +33,9 @@ const ExpenseForm = (props) => {
     // we execute(!) here a function from a ExpenseForm props -> see it in return in NewExpense.js; we can excute this function from another component,
     // becouse we have a pointer in prop to this function in component NewExpens.js;
     
-    // setEnteredTitle('');
-    // setEnteredAmount('');
-    // setEnteredDate('');
+    setEnteredTitle('');
+    setEnteredAmount('');
+    setEnteredDate('');
     // executing functions; ('') it clears our form after submission
     };
 
