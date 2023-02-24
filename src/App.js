@@ -40,9 +40,7 @@ function App() {
   return (
     <div>
       <NewExpense onAddExpense={addExpenseHandler} />
-      <Expenses items={expenses} />
-      <button style={{ display: "flex", margin: "auto"}} onClick={onDelete}>Delete Item From Array</button>
-      {/* prototype of deleting */}
+      <Expenses items={expenses}/>
     </div>
   );
 }
