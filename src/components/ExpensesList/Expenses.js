@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 
 import "./Expenses.css";
-import ExpenseItem from "./ExpenseItems";
 import Card from "./Card";
 import ExpensesFilter from "../ExpensesFilter/ExpensesFilter";
 import ExpensesList from './ExpensesList';
@@ -17,14 +16,6 @@ function Expenses(props) {
     let filteredList = props.items.filter(expenses => {
         return expenses.date.getFullYear().toString() === filteredYear
     });
-
-    // deleting function
-    // const onDelete = () => {    
-        
-    //     expensesContent(exp => {
-    //         return exp.filter(par => par.expense.id !== expense.id);
-    //     });
-    // };
 
     return (
         <div>

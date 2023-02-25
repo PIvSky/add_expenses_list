@@ -13,6 +13,14 @@ const ExpensesList = (props) => {
         </h2>
     };
 
+    // deleting function
+    // const onDelete = () => {    
+        
+    //     expensesContent(exp => {
+    //         return exp.filter(par => par.expense.id !== expense.id);
+    //     });
+    // };
+
     return (
         <ul className="expenses-list">
             {props.items.map((expense) => (
@@ -27,5 +35,6 @@ const ExpensesList = (props) => {
         </ul>
     )
 }
-
 export default ExpensesList;
+
+// onClick={props.onClick}
