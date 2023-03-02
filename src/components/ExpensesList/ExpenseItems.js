@@ -6,15 +6,15 @@ import './ExpenseItems.css';
 
 function ExpenseItem(props) {
 
-  const [isDelete, isSetDelete] = useState(true);
+  const [showCard, setShowCard] = useState(true);
 
   const onDelete = (event) => {
-    isSetDelete(false)
+    setShowCard(false)
   }
   
   return (
     <li>
-      {isDelete ? <Card className='expense-item'  >
+      {showCard ? <Card className='expense-item'  >
         <ExpenseDate date={props.date} />
         <div className='expense-item__description'  >
           <h2>{props.title}</h2>

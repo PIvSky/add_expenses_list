@@ -3,9 +3,9 @@ import './ExpensesList.css'
 
 import ExpenseItem from "./ExpenseItems";
 
-const ExpensesList = (props) => {
+const ExpensesList = ({items}) => {
 
-    if (props.items.length === 0) {
+    if (items.length === 0) {
         return <h2 
         style={{color: "red", margin: 16}}
         className="expenses-list__fallback">
@@ -23,7 +23,7 @@ const ExpensesList = (props) => {
 
     return (
         <ul className="expenses-list">
-            {props.items.map((expense) => (
+            {items.map((expense) => (
             <ExpenseItem
                 key={expense.id}
                 title={expense.title} 
