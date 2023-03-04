@@ -31,7 +31,7 @@ const ExpensesList = ({items}) => {
                 date={expense.date}
                 // onClick={onDelete}
             />
-            ))};
+            ))}
         </ul>
     )
 }

@@ -35,15 +35,30 @@
     border-radius: 12px;
   }
 
-  .expense-item__trash {
+  .expense-item__buttonHide {
     width: 40px;
     height: 40px;
     margin: 5px;
     background: none;
-    background-image: url('/src/icons/trashIcon.png');
+    background-image: url('/src/icons/invisibile_icon.png');
     background-repeat: no-repeat;
     background-size:contain;
     border: none;
+  }
+
+  .expense-item__buttonShow{
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    background: none;
+    background-image: url('/src/icons/visibile_icon.png');
+    background-size: contain;
+    border: none;
+  }
+
+  .expense-item__hiddenText {
+    margin: auto;
+    color: rgb(255, 255, 255);
   }
   
   @media (min-width: 580px) {

@@ -8,21 +8,30 @@ function ExpenseItem(props) {
 
   const [showCard, setShowCard] = useState(true);
 
-  const onDelete = (event) => {
+  const onHide = (event) => {
     setShowCard(false)
+  }
+
+  const onShow = (event) => {
+    setShowCard(true)
   }
   
   return (
     <li>
-      {showCard ? <Card className='expense-item'  >
+      {showCard ? <Card className='expense-item'>
         <ExpenseDate date={props.date} />
-        <div className='expense-item__description'  >
+        <div className='expense-item__description'>
           <h2>{props.title}</h2>
-          <div className='expense-item__price' >{props.amount + '$' }</div>
+          <div className='expense-item__price' >{props.amount + '$'}</div>
         </div>
-        <button type="button" className='expense-item__trash' onClick={onDelete}>
-        </button>
-      </Card> : '' }
+        <button type="button" className='expense-item__buttonHide' onClick={onHide}></button>
+      </Card> 
+      : 
+      <Card className='expense-item'>
+        <p className='expense-item__hiddenText'>Hidden from the Wife!</p>
+        <button type="button" className='expense-item__buttonShow' onClick={onShow}></button>
+      </Card>  
+      }
     </li>
   );
 };
